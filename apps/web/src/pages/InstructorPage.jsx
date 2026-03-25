@@ -18,8 +18,8 @@ const InstructorPage = () => {
     },
     {
       icon: <Code className="w-6 h-6 text-white" />,
-      title: 'Programador',
-      description: 'Especialista en automatización de workflows y desarrollo de herramientas para optimización de procesos'
+      title: 'Técnico Programador',
+      description: 'Recibido en la UTN FRCon desarrollo de herramientas para optimización de procesos'
     },
     {
       icon: <GraduationCap className="w-6 h-6 text-white" />,
@@ -34,9 +34,9 @@ const InstructorPage = () => {
   ];
 
   const expertise = [
-    'Modelado 3D avanzado y modelado arquitectónico',
-    'Renders fotorrealistas con Recorridos Virtuales y V-Ray',
-    'Post-procesado profesional',
+    'Modelado 3D arquitectónico avanzado',
+    'Renders fotorrealistas con Recorridos Virtuales',
+    'Edición y Post-procesado',
     'Integración de IA (Gemini) en diseño arquitectónico',
     'Iluminación profesional IES y materialidad PBR',
     'Gestión de proyectos complejos de gran escala',
@@ -67,7 +67,7 @@ const InstructorPage = () => {
               <Badge className="mb-6 bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm">
                 Instructor
               </Badge>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight" style={{letterSpacing: '-0.02em'}}>
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight" style={{ letterSpacing: '-0.02em' }}>
                 Guido Asplanatti
               </h1>
               <p className="text-xl text-slate-200 max-w-3xl mx-auto leading-relaxed">
@@ -98,7 +98,7 @@ const InstructorPage = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
               >
-                <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6" style={{letterSpacing: '-0.02em'}}>
+                <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6" style={{ letterSpacing: '-0.02em' }}>
                   Experiencia profesional
                 </h2>
                 <div className="space-y-4 text-base text-slate-700 leading-relaxed">
@@ -130,7 +130,7 @@ const InstructorPage = () => {
               transition={{ duration: 0.6 }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4" style={{letterSpacing: '-0.02em'}}>
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4" style={{ letterSpacing: '-0.02em' }}>
                 Credenciales y especialidades
               </h2>
               <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
@@ -155,7 +155,7 @@ const InstructorPage = () => {
                       </div>
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-xl font-semibold text-slate-900 mb-2" style={{letterSpacing: '-0.01em'}}>
+                      <h3 className="text-xl font-semibold text-slate-900 mb-2" style={{ letterSpacing: '-0.01em' }}>
                         {credential.title}
                       </h3>
                       <p className="text-sm text-slate-600 leading-relaxed">
@@ -179,7 +179,7 @@ const InstructorPage = () => {
               transition={{ duration: 0.6 }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4" style={{letterSpacing: '-0.02em'}}>
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4" style={{ letterSpacing: '-0.02em' }}>
                 Áreas de expertise
               </h2>
               <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
@@ -216,7 +216,7 @@ const InstructorPage = () => {
               <p className="text-base text-slate-600 leading-relaxed max-w-3xl mx-auto mb-6">
                 Guido no solo enseña teoría: comparte técnicas, workflows y mejores prácticas que utiliza activamente en proyectos reales. Cada clase está diseñada para que aprendas habilidades directamente aplicables al mercado profesional.
               </p>
-              <Button 
+              <Button
                 asChild
                 size="lg"
                 className="bg-[#0369a1] text-white hover:bg-[#0284c7] transition-all duration-200 active:scale-[0.98]"

@@ -95,7 +95,7 @@ const ContactoPage = () => {
     <>
       <Helmet>
         <title>Inscripción - Modelado 3D de Arquitectura</title>
-        <meta name="description" content="Inscríbete al curso de Modelado 3D de Arquitectura. Inversión completa $110.240 ARS o Beca Concordia Innova $49.998 ARS. Cupos limitados a 25 estudiantes." />
+        <meta name="description" content="Inscríbete al curso de Modelado 3D de Arquitectura. Inversión completa $110.240 ARS o Beca Concordia Innova $49.998 ARS. Cupos limitados a 30 estudiantes." />
       </Helmet>
 
       <div className="min-h-screen bg-white">
@@ -118,7 +118,7 @@ const ContactoPage = () => {
                 Inscripción al curso
               </h1>
               <p className="text-xl text-slate-200 max-w-3xl mx-auto leading-relaxed">
-                Reserva tu lugar en el próximo curso. Solo 25 cupos disponibles
+                Reserva tu lugar en el próximo curso. Solo 30 cupos disponibles
               </p>
             </motion.div>
           </div>
