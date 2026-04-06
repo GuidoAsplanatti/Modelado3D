@@ -58,7 +58,7 @@ const GaleriaPage = () => {
       <Button 
         asChild
         size="lg"
-        className="bg-[#0369a1] text-white hover:bg-[#0284c7] hover:scale-105 hover:shadow-xl transition-all duration-300 active:scale-[0.98] text-base px-8 py-6 w-full sm:w-auto"
+        className="bg-[#8BC756] text-slate-900 hover:bg-[#6A9941] hover:scale-105 hover:shadow-xl transition-all duration-300 active:scale-[0.98] text-base px-8 py-6 w-full sm:w-auto"
       >
         <Link to="/contacto">
           Quiero aprender esto
@@ -103,7 +103,7 @@ const GaleriaPage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <Badge className="mb-6 bg-[#0369a1]/20 text-[#0369a1] border border-[#0369a1]/30 hover:bg-[#0369a1]/30 text-sm px-4 py-1 backdrop-blur-sm">
+              <Badge className="mb-6 bg-[#8BC756]/20 text-[#8BC756] border border-[#8BC756]/30 hover:bg-[#8BC756]/30 text-sm px-4 py-1 backdrop-blur-sm">
                 Portfolio de Alumnos
               </Badge>
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight" style={{letterSpacing: '-0.02em'}}>
@@ -126,10 +126,10 @@ const GaleriaPage = () => {
               transition={{ duration: 0.6 }}
               className="mb-16 text-center max-w-3xl mx-auto"
             >
-              <div className="w-16 h-16 bg-[#0369a1]/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Sparkles className="w-8 h-8 text-[#0369a1]" />
+              <div className="w-16 h-16 bg-[#8BC756]/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <Sparkles className="w-8 h-8 text-[#8BC756]" />
               </div>
-              <h2 className="text-sm font-bold text-[#0369a1] tracking-widest uppercase mb-3">
+              <h2 className="text-sm font-bold text-[#8BC756] tracking-widest uppercase mb-3">
                 El Inicio (Casa H)
               </h2>
               <h3 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6" style={{letterSpacing: '-0.02em'}}>
@@ -178,10 +178,10 @@ const GaleriaPage = () => {
               transition={{ duration: 0.6 }}
               className="mb-20 text-center max-w-3xl mx-auto"
             >
-              <div className="w-16 h-16 bg-[#0369a1]/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Layers className="w-8 h-8 text-[#0369a1]" />
+              <div className="w-16 h-16 bg-[#8BC756]/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <Layers className="w-8 h-8 text-[#8BC756]" />
               </div>
-              <h2 className="text-sm font-bold text-[#0369a1] tracking-widest uppercase mb-3">
+              <h2 className="text-sm font-bold text-[#8BC756] tracking-widest uppercase mb-3">
                 El Detalle (Depto ARCO)
               </h2>
               <h3 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6" style={{letterSpacing: '-0.02em'}}>
@@ -247,10 +247,10 @@ const GaleriaPage = () => {
               transition={{ duration: 0.6 }}
               className="mb-16 text-center max-w-3xl mx-auto"
             >
-              <div className="w-16 h-16 bg-[#0369a1]/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Building className="w-8 h-8 text-[#0369a1]" />
+              <div className="w-16 h-16 bg-[#8BC756]/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <Building className="w-8 h-8 text-[#8BC756]" />
               </div>
-              <h2 className="text-sm font-bold text-[#0369a1] tracking-widest uppercase mb-3">
+              <h2 className="text-sm font-bold text-[#8BC756] tracking-widest uppercase mb-3">
                 La Escala (Edificio ARCO)
               </h2>
               <h3 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6" style={{letterSpacing: '-0.02em'}}>

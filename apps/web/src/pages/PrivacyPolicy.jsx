@@ -49,19 +49,19 @@ const PrivacyPolicy = () => {
                   </p>
                   <ul className="space-y-3">
                     <li className="flex items-start gap-3">
-                      <span className="text-[#0369a1] font-bold">•</span>
+                      <span className="text-[#8BC756] font-bold">•</span>
                       <span>Inscripción y gestión administrativa del curso presencial.</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="text-[#0369a1] font-bold">•</span>
+                      <span className="text-[#8BC756] font-bold">•</span>
                       <span>Comunicación sobre horarios, tutorías, material de Drive y actualizaciones del contenido.</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="text-[#0369a1] font-bold">•</span>
+                      <span className="text-[#8BC756] font-bold">•</span>
                       <span>Procesamiento de pagos y control de cupos.</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="text-[#0369a1] font-bold">•</span>
+                      <span className="text-[#8BC756] font-bold">•</span>
                       <span>Intercambio de información básica (Nombre, Apellido y DNI) con la Dirección de Innovación y Economía del Conocimiento (DIEC) de la Municipalidad de Concordia a los fines exclusivos de la emisión y validación de los certificados oficiales.</span>
                     </li>
                   </ul>

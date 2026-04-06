@@ -26,7 +26,7 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-xl bg-[#0369a1] flex items-center justify-center">
+              <div className="w-10 h-10 rounded-xl bg-[#8BC756] flex items-center justify-center">
                 <Layers className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -49,7 +49,7 @@ const Footer = () => {
                 <li key={link.path}>
                   <Link
                     to={link.path}
-                    className="text-sm text-slate-400 hover:text-[#0369a1] transition-colors duration-200"
+                    className="text-sm text-slate-400 hover:text-[#8BC756] transition-colors duration-200"
                   >
                     {link.name}
                   </Link>
@@ -65,15 +65,12 @@ const Footer = () => {
             </span>
             <ul className="space-y-3">
               <li className="flex items-start gap-2 text-sm text-slate-400">
-                <MapPin className="w-4 h-4 text-[#0369a1] flex-shrink-0 mt-0.5" />
+                <MapPin className="w-4 h-4 text-[#8BC756] flex-shrink-0 mt-0.5" />
                 <span>Puerto Tec, Concordia, Entre Ríos</span>
               </li>
+
               <li className="flex items-start gap-2 text-sm text-slate-400">
-                <Mail className="w-4 h-4 text-[#0369a1] flex-shrink-0 mt-0.5" />
-                <span>guidoasplanatti@gmail.com</span>
-              </li>
-              <li className="flex items-start gap-2 text-sm text-slate-400">
-                <Phone className="w-4 h-4 text-[#0369a1] flex-shrink-0 mt-0.5" />
+                <Phone className="w-4 h-4 text-[#8BC756] flex-shrink-0 mt-0.5" />
                 <span>+54 9 345 625-9608</span>
               </li>
             </ul>
@@ -92,7 +89,7 @@ const Footer = () => {
                   aria-label={social.label}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center hover:bg-[#0369a1] transition-all duration-200 active:scale-[0.98]"
+                  className="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center hover:bg-[#8BC756] transition-all duration-200 active:scale-[0.98]"
                 >
                   <social.icon className="w-5 h-5" />
                 </a>
@@ -108,10 +105,10 @@ const Footer = () => {
               © 2026 Modelado 3D Arquitectura. Todos los derechos reservados.
             </p>
             <div className="flex gap-6">
-              <Link to="/privacidad" className="text-sm text-slate-400 hover:text-[#0369a1] transition-colors duration-200">
+              <Link to="/privacidad" className="text-sm text-slate-400 hover:text-[#8BC756] transition-colors duration-200">
                 Política de privacidad
               </Link>
-              <Link to="/terminos" className="text-sm text-slate-400 hover:text-[#0369a1] transition-colors duration-200">
+              <Link to="/terminos" className="text-sm text-slate-400 hover:text-[#8BC756] transition-colors duration-200">
                 Términos de servicio
               </Link>
             </div>

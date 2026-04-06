@@ -38,7 +38,7 @@ const Header = () => {
                 to={link.path}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                   isActive(link.path)
-                    ? 'text-[#0369a1] bg-[#0369a1]/10 border-b-2 border-[#0369a1]'
+                    ? 'text-[#8BC756] bg-[#8BC756]/10 border-b-2 border-[#8BC756]'
                     : 'text-slate-700 hover:text-slate-900 hover:bg-slate-100'
                 }`}
               >
@@ -51,7 +51,7 @@ const Header = () => {
           <div className="hidden md:block">
             <Button 
               asChild
-              className="bg-[#0369a1] text-white hover:bg-[#0284c7] transition-all duration-200 active:scale-[0.98]"
+              className="bg-[#8BC756] text-slate-900 hover:bg-[#6A9941] transition-all duration-200 active:scale-[0.98]"
             >
               <Link to="/contacto">Inscribirse</Link>
             </Button>
@@ -73,7 +73,7 @@ const Header = () => {
                     onClick={() => setIsOpen(false)}
                     className={`px-4 py-3 rounded-xl text-base font-medium transition-all duration-200 ${
                       isActive(link.path)
-                        ? 'text-[#0369a1] bg-[#0369a1]/10 border-l-4 border-[#0369a1]'
+                        ? 'text-[#8BC756] bg-[#8BC756]/10 border-l-4 border-[#8BC756]'
                         : 'text-slate-700 hover:bg-slate-100'
                     }`}
                   >
@@ -82,7 +82,7 @@ const Header = () => {
                 ))}
                 <Button 
                   asChild
-                  className="mt-4 bg-[#0369a1] text-white hover:bg-[#0284c7] transition-all duration-200 active:scale-[0.98]"
+                  className="mt-4 bg-[#8BC756] text-slate-900 hover:bg-[#6A9941] transition-all duration-200 active:scale-[0.98]"
                 >
                   <Link to="/contacto" onClick={() => setIsOpen(false)}>
                     Inscribirse

@@ -16,7 +16,7 @@ const UbicacionPage = () => {
         <Header />
 
         {/* Hero Section */}
-        <section className="relative py-24 bg-gradient-to-br from-slate-900 via-slate-800 to-[#0369a1]/80 text-white overflow-hidden">
+        <section className="relative py-24 bg-gradient-to-br from-slate-900 via-slate-800 to-[#8BC756]/80 text-white overflow-hidden">
           <div className="absolute inset-0 concrete-texture opacity-10"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-8">
             <motion.div

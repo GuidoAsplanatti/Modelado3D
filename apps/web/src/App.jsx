@@ -34,7 +34,7 @@ function App() {
               <p className="text-xl text-slate-600 mb-8">Página no encontrada</p>
               <a 
                 href="/" 
-                className="inline-block px-6 py-3 bg-[#0369a1] text-white rounded-xl hover:bg-[#0284c7] transition-all duration-200"
+                className="inline-block px-6 py-3 bg-[#8BC756] text-slate-900 rounded-xl hover:bg-[#6A9941] transition-all duration-200"
               >
                 Volver al inicio
               </a>

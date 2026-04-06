@@ -17,13 +17,13 @@ const PricingCard = ({ plan, isRecommended, index }) => {
       <Card 
         className={`h-full rounded-2xl transition-all duration-300 ${
           isRecommended 
-            ? 'shadow-arch-lg ring-2 ring-[#0369a1] border-[#0369a1]' 
+            ? 'shadow-arch-lg ring-2 ring-[#8BC756] border-[#8BC756]' 
             : 'shadow-lg hover:shadow-arch border-slate-200'
         }`}
       >
         <CardHeader>
           {isRecommended && (
-            <Badge className="w-fit mb-3 bg-[#0369a1] text-white hover:bg-[#0284c7]">
+            <Badge className="w-fit mb-3 bg-[#8BC756] text-slate-900 hover:bg-[#6A9941]">
               Recomendado
             </Badge>
           )}
@@ -56,7 +56,7 @@ const PricingCard = ({ plan, isRecommended, index }) => {
           <ul className="space-y-3">
             {plan.features.map((feature, idx) => (
               <li key={idx} className="flex items-start gap-3">
-                <Check className="w-5 h-5 text-[#0369a1] flex-shrink-0 mt-0.5" />
+                <Check className="w-5 h-5 text-[#8BC756] flex-shrink-0 mt-0.5" />
                 <span className="text-sm text-slate-700 leading-relaxed">{feature}</span>
               </li>
             ))}
@@ -66,7 +66,7 @@ const PricingCard = ({ plan, isRecommended, index }) => {
           <Button 
             className={`w-full transition-all duration-200 active:scale-[0.98] ${
               isRecommended 
-                ? 'bg-[#0369a1] text-white hover:bg-[#0284c7]' 
+                ? 'bg-[#8BC756] text-white hover:bg-[#6A9941]' 
                 : 'bg-slate-700 text-white hover:bg-slate-800'
             }`}
             size="lg"

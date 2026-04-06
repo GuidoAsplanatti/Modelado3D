@@ -14,7 +14,7 @@ const ProjectCard = ({ project, index }) => {
       <Card className="h-full rounded-2xl shadow-lg hover:shadow-arch-lg transition-all duration-300 hover:-translate-y-1 border-slate-200">
         <CardHeader>
           <div className="flex items-start justify-between mb-2">
-            <Badge className="bg-[#0369a1] text-white hover:bg-[#0284c7]">
+            <Badge className="bg-[#8BC756] text-slate-900 hover:bg-[#6A9941]">
               Proyecto {index + 1}
             </Badge>
             <span className="text-sm font-medium text-slate-600">{project.duration}</span>
@@ -34,7 +34,7 @@ const ProjectCard = ({ project, index }) => {
             <ul className="space-y-2">
               {project.deliverables.map((deliverable, idx) => (
                 <li key={idx} className="flex items-start gap-2 text-sm text-slate-700">
-                  <span className="text-[#0369a1] mt-1">•</span>
+                  <span className="text-[#8BC756] mt-1">•</span>
                   <span className="leading-relaxed">{deliverable}</span>
                 </li>
               ))}

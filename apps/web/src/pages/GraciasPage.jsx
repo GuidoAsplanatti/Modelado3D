@@ -52,7 +52,7 @@ const GraciasPage = () => {
 
           <Link 
             to="/"
-            className="inline-block w-full py-3 px-6 bg-[#0369a1] text-white font-medium rounded-xl hover:bg-[#0284c7] transition-all duration-200 active:scale-[0.98]"
+            className="inline-block w-full py-3 px-6 bg-[#8BC756] text-slate-900 font-medium rounded-xl hover:bg-[#6A9941] transition-all duration-200 active:scale-[0.98]"
           >
             Volver al inicio ahora
           </Link>

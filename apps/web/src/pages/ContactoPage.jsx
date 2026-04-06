@@ -117,7 +117,7 @@ const ContactoPage = () => {
         <Header />
 
         {/* Hero Section */}
-        <section className="relative py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-[#0369a1] text-white overflow-hidden">
+        <section className="relative py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-[#8BC756] text-white overflow-hidden">
           <div className="absolute inset-0 concrete-texture opacity-10"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
@@ -135,7 +135,7 @@ const ContactoPage = () => {
               <p className="text-xl text-slate-200 max-w-3xl mx-auto leading-relaxed mb-10">
                 Reserva tu lugar en el próximo curso. Solo 30 cupos disponibles
               </p>
-              
+
               <div className="flex justify-center items-center gap-8 opacity-90">
                 <img src="/images/logos/innovaVerde.png" alt="Innova Logo" className="h-10 md:h-14 w-auto object-contain brightness-0 invert" />
                 <img src="/images/logos/ConcordiaVerde.png" alt="Municipalidad Concordia Logo" className="h-10 md:h-14 w-auto object-contain brightness-0 invert" />
@@ -178,7 +178,7 @@ const ContactoPage = () => {
               className="mt-12 bg-white rounded-2xl p-6 shadow-lg border border-slate-200 max-w-3xl mx-auto"
             >
               <div className="flex items-start gap-3">
-                <CheckCircle2 className="w-6 h-6 text-[#0369a1] flex-shrink-0 mt-1" />
+                <CheckCircle2 className="w-6 h-6 text-[#8BC756] flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="text-lg font-semibold text-slate-900 mb-2">
                     Certificación oficial incluida
@@ -240,7 +240,7 @@ const ContactoPage = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
-                action="https://formsubmit.co/guidoasplanatti@gmail.com"
+                action="https://formsubmit.co/affb26794c444bbef9cddb17845edfeb"
                 method="POST"
                 onSubmit={handleSubmit}
                 className="bg-slate-50 rounded-2xl p-8 border border-slate-200"
@@ -364,7 +364,7 @@ const ContactoPage = () => {
                   <Button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-[#0369a1] text-white hover:bg-[#0284c7] transition-all duration-200 active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full bg-[#8BC756] text-slate-900 hover:bg-[#6A9941] transition-all duration-200 active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed"
                     size="lg"
                   >
                     {isSubmitting ? 'Cargando...' : 'Enviar inscripción'}
@@ -405,7 +405,7 @@ const ContactoPage = () => {
                 transition={{ duration: 0.5 }}
                 className="bg-white rounded-2xl p-6 shadow-lg border border-slate-200 text-center"
               >
-                <div className="w-12 h-12 bg-[#0369a1] rounded-xl flex items-center justify-center mx-auto mb-4">
+                <div className="w-12 h-12 bg-[#8BC756] rounded-xl flex items-center justify-center mx-auto mb-4">
                   <MapPin className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-slate-900 mb-2">Ubicación</h3>
@@ -422,7 +422,7 @@ const ContactoPage = () => {
                 transition={{ duration: 0.5, delay: 0.1 }}
                 className="bg-white rounded-2xl p-6 shadow-lg border border-slate-200 text-center"
               >
-                <div className="w-12 h-12 bg-[#0369a1] rounded-xl flex items-center justify-center mx-auto mb-4">
+                <div className="w-12 h-12 bg-[#8BC756] rounded-xl flex items-center justify-center mx-auto mb-4">
                   <Mail className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-slate-900 mb-2">Email</h3>
@@ -438,7 +438,7 @@ const ContactoPage = () => {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="bg-white rounded-2xl p-6 shadow-lg border border-slate-200 text-center"
               >
-                <div className="w-12 h-12 bg-[#0369a1] rounded-xl flex items-center justify-center mx-auto mb-4">
+                <div className="w-12 h-12 bg-[#8BC756] rounded-xl flex items-center justify-center mx-auto mb-4">
                   <Phone className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-slate-900 mb-2">Teléfono</h3>
@@ -462,8 +462,8 @@ const ContactoPage = () => {
             className="bg-white rounded-2xl p-6 md:p-8 max-w-md w-full shadow-2xl relative"
           >
             <div className="flex flex-col items-center text-center">
-              <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mb-4">
-                <AlertCircle className="w-8 h-8 text-[#0369a1]" />
+              <div className="w-16 h-16 bg-[#8BC756]/10 rounded-full flex items-center justify-center mb-4">
+                <AlertCircle className="w-8 h-8 text-[#8BC756]" />
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-2">
                 Atención: Requisito de PC
@@ -473,7 +473,7 @@ const ContactoPage = () => {
               </p>
               <Button
                 onClick={() => setShowModal(false)}
-                className="w-full bg-[#0369a1] text-white hover:bg-[#0284c7] transition-all duration-200 active:scale-[0.98]"
+                className="w-full bg-[#8BC756] text-slate-900 hover:bg-[#6A9941] transition-all duration-200 active:scale-[0.98]"
                 size="lg"
               >
                 Entendido

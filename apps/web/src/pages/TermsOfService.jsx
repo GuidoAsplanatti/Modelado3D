@@ -42,11 +42,11 @@ const TermsOfService = () => {
                   </p>
                   <ul className="space-y-3">
                     <li className="flex items-start gap-3">
-                      <span className="text-[#0369a1] font-bold">•</span>
+                      <span className="text-[#8BC756] font-bold">•</span>
                       <span>El pago debe realizarse en su totalidad o en las cuotas acordadas previas al inicio de la cursada para asegurar el cupo (limitado a un máximo de 30 estudiantes).</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="text-[#0369a1] font-bold">•</span>
+                      <span className="text-[#8BC756] font-bold">•</span>
                       <span>Nuestra política no admite reembolsos una vez el programa haya comenzado, dado que los cupos son estrictamente limitados y la vacante queda bloqueada para otros posibles asistentes.</span>
                     </li>
                   </ul>
@@ -59,15 +59,15 @@ const TermsOfService = () => {
                   </p>
                   <ul className="space-y-4">
                     <li className="flex items-start gap-3">
-                      <span className="text-[#0369a1] font-bold">•</span>
+                      <span className="text-[#8BC756] font-bold">•</span>
                       <span><strong>Asistencia:</strong> Se requiere un mínimo de 75% de asistencia a las clases presenciales (Jueves 14:30 a 16:30hs en la sede de Puerto Tec).</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="text-[#0369a1] font-bold">•</span>
+                      <span className="text-[#8BC756] font-bold">•</span>
                       <span><strong>Compromiso Virtual:</strong> El estudiante se compromete a visualizar el contenido asincrónico y conectarse a las tutorías virtuales (Martes 14:30 a 16:00hs) según el cronograma establecido.</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="text-[#0369a1] font-bold">•</span>
+                      <span className="text-[#8BC756] font-bold">•</span>
                       <span><strong>Requisitos Técnicos:</strong> Es obligación del alumno asistir a las clases presenciales con notebook propia. La organización y el instructor no proveen equipos informáticos ni licencias oficiales de los softwares utilizados durante la cursada.</span>
                     </li>
                   </ul>

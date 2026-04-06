@@ -89,7 +89,7 @@ const CursosPage = () => {
         <Header />
 
         {/* Hero Section */}
-        <section className="relative py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-[#0369a1] text-white overflow-hidden">
+        <section className="relative py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-[#8BC756] text-white overflow-hidden">
           <div className="absolute inset-0 concrete-texture opacity-10"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
@@ -204,7 +204,7 @@ const CursosPage = () => {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-arch-lg transition-all duration-300 border border-slate-200"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-[#0369a1] flex items-center justify-center mb-4">
+                  <div className="w-12 h-12 rounded-xl bg-[#8BC756] flex items-center justify-center mb-4">
                     {item.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-slate-900 mb-2" style={{ letterSpacing: '-0.01em' }}>
@@ -222,10 +222,10 @@ const CursosPage = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="mt-12 bg-gradient-to-br from-[#0369a1]/5 to-[#0284c7]/5 rounded-2xl p-8 border border-[#0369a1]/20"
+              className="mt-12 bg-gradient-to-br from-[#8BC756]/5 to-[#6A9941]/5 rounded-2xl p-8 border border-[#8BC756]/20"
             >
               <div className="flex items-start gap-4">
-                <Award className="w-8 h-8 text-[#0369a1] flex-shrink-0 mt-1" />
+                <Award className="w-8 h-8 text-[#8BC756] flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="text-xl font-semibold text-slate-900 mb-2">
                     Duración: 8 semanas intensivas
@@ -267,7 +267,7 @@ const CursosPage = () => {
                   transition={{ duration: 0.5, delay: index * 0.05 }}
                   className="flex items-start gap-3 bg-slate-50 rounded-xl p-4 hover:bg-slate-100 transition-colors duration-200"
                 >
-                  <CheckCircle2 className="w-6 h-6 text-[#0369a1] flex-shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-6 h-6 text-[#8BC756] flex-shrink-0 mt-0.5" />
                   <span className="text-sm text-slate-700 leading-relaxed">{outcome}</span>
                 </motion.div>
               ))}
@@ -283,7 +283,7 @@ const CursosPage = () => {
               <Button
                 asChild
                 size="lg"
-                className="bg-[#0369a1] text-white hover:bg-[#0284c7] transition-all duration-200 active:scale-[0.98] text-lg px-8 py-6"
+                className="bg-[#8BC756] text-slate-900 hover:bg-[#6A9941] transition-all duration-200 active:scale-[0.98] text-lg px-8 py-6"
               >
                 <Link to="/contacto#inversion">Inscribirse ahora</Link>
               </Button>

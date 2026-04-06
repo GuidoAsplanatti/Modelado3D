@@ -49,7 +49,7 @@ const ComparisonSlider = () => {
         className="absolute top-0 bottom-0 w-1 bg-white shadow-[0_0_10px_rgba(0,0,0,0.3)] pointer-events-none z-10" 
         style={{ left: `calc(${position}% - 2px)` }}
       >
-        <div className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-10 h-10 md:w-12 md:h-12 bg-white rounded-full shadow-xl flex items-center justify-center text-[#0369a1] group-hover:scale-110 transition-transform duration-200">
+        <div className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-10 h-10 md:w-12 md:h-12 bg-white rounded-full shadow-xl flex items-center justify-center text-[#8BC756] group-hover:scale-110 transition-transform duration-200">
           <GripVertical className="w-5 h-5 md:w-6 md:h-6" />
         </div>
       </div>

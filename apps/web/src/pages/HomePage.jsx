@@ -77,19 +77,19 @@ const HomePage = () => {
   }];
 
   const logistics = [{
-    icon: <MapPin className="w-5 h-5 text-[#0369a1]" />,
+    icon: <MapPin className="w-5 h-5 text-[#8BC756]" />,
     label: 'Ubicación',
     value: 'Puerto Tec, Concordia'
   }, {
-    icon: <Calendar className="w-5 h-5 text-[#0369a1]" />,
+    icon: <Calendar className="w-5 h-5 text-[#8BC756]" />,
     label: 'Duración',
     value: '8 semanas intensivas'
   }, {
-    icon: <Clock className="w-5 h-5 text-[#0369a1]" />,
+    icon: <Clock className="w-5 h-5 text-[#8BC756]" />,
     label: 'Horarios',
     value: 'Martes 1:30h (Virtual) + Jueves 14:30-16:30hs (Presencial)'
   }, {
-    icon: <Users className="w-5 h-5 text-[#0369a1]" />,
+    icon: <Users className="w-5 h-5 text-[#8BC756]" />,
     label: 'Cupos',
     value: 'Limitado a 30 estudiantes'
   }];
@@ -108,7 +108,7 @@ const HomePage = () => {
         <section className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-0">
             <img src="/images/portada.jpg" alt="Modelado 3D arquitectónico profesional" className="w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-gradient-to-br from-slate-900/90 via-slate-900/80 to-[#0369a1]/70"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-slate-900/90 via-slate-900/80 to-[#8BC756]/70"></div>
           </div>
 
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -121,7 +121,7 @@ const HomePage = () => {
             }} transition={{
               duration: 0.8
             }} className="text-center">
-              <Badge className="mb-6 bg-[#0369a1] text-white hover:bg-[#0284c7] text-sm px-4 py-1">
+              <Badge className="mb-6 bg-[#8BC756] text-slate-900 hover:bg-[#6A9941] text-sm px-4 py-1">
                 Curso Intensivo 8 Semanas
               </Badge>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight" style={{
@@ -138,7 +138,7 @@ const HomePage = () => {
                 <img src="/images/logos/ConcordiaVerde.png" alt="Municipalidad Concordia Logo" className="h-12 md:h-16 w-auto object-contain brightness-0 invert" />
               </div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <Button asChild size="lg" className="bg-[#0369a1] text-white hover:bg-[#0284c7] transition-all duration-200 active:scale-[0.98] text-lg px-8 py-6">
+                <Button asChild size="lg" className="bg-[#8BC756] text-slate-900 hover:bg-[#6A9941] transition-all duration-200 active:scale-[0.98] text-lg px-8 py-6">
                   <Link to="/contacto#inversion">Inscribirse ahora</Link>
                 </Button>
                 <Button asChild size="lg" variant="outline" className="bg-white/10 text-white border-white/30 hover:bg-white/20 backdrop-blur-sm transition-all duration-200 active:scale-[0.98] text-lg px-8 py-6">
@@ -246,12 +246,12 @@ const HomePage = () => {
               }} className={`grid grid-cols-1 md:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
                 <div className={index % 2 === 1 ? 'md:order-2' : ''}>
                   <div className="flex items-center gap-3 mb-4">
-                    <span className="text-6xl font-bold text-[#0369a1]/20" style={{
+                    <span className="text-6xl font-bold text-[#8BC756]/20" style={{
                       fontVariantNumeric: 'tabular-nums'
                     }}>
                       0{index + 1}
                     </span>
-                    <Badge className="bg-[#0369a1] text-white hover:bg-[#0284c7]">
+                    <Badge className="bg-[#8BC756] text-slate-900 hover:bg-[#6A9941]">
                       Proyecto {index + 1}
                     </Badge>
                   </div>
@@ -269,7 +269,7 @@ const HomePage = () => {
                     </span>
                     <ul className="space-y-2">
                       {project.deliverables.map((deliverable, idx) => <li key={idx} className="flex items-start gap-2 text-sm text-slate-700">
-                        <span className="text-[#0369a1] mt-1">•</span>
+                        <span className="text-[#8BC756] mt-1">•</span>
                         <span className="leading-relaxed">{deliverable}</span>
                       </li>)}
                     </ul>
@@ -277,7 +277,7 @@ const HomePage = () => {
                 </div>
                 <div className={index % 2 === 1 ? 'md:order-1' : ''}>
                   <div className="aspect-video rounded-2xl overflow-hidden shadow-arch-lg group relative">
-                    <div className="absolute -inset-4 bg-[#0369a1]/10 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                    <div className="absolute -inset-4 bg-[#8BC756]/10 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                     <img src={project.image} alt={project.name} className="relative w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                     <div className="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-2xl pointer-events-none"></div>
                   </div>
@@ -323,7 +323,7 @@ const HomePage = () => {
               }} transition={{
                 duration: 0.5,
                 delay: index * 0.1
-              }} className="bg-slate-800 rounded-2xl p-6 border border-slate-700 hover:border-[#0369a1] transition-all duration-300">
+              }} className="bg-slate-800 rounded-2xl p-6 border border-slate-700 hover:border-[#8BC756] transition-all duration-300">
                 <div className="flex items-start gap-3">
                   <div className="flex-shrink-0 mt-1">
                     {item.icon}
@@ -352,7 +352,7 @@ const HomePage = () => {
               duration: 0.6,
               delay: 0.4
             }} className="mt-12 text-center">
-              <Button asChild size="lg" className="bg-[#0369a1] text-white hover:bg-[#0284c7] transition-all duration-200 active:scale-[0.98] text-lg px-8 py-6">
+              <Button asChild size="lg" className="bg-[#8BC756] text-slate-900 hover:bg-[#6A9941] transition-all duration-200 active:scale-[0.98] text-lg px-8 py-6">
                 <Link to="/contacto#inversion">Reservar mi lugar</Link>
               </Button>
             </motion.div>

@@ -70,7 +70,7 @@ const FaqPage = () => {
         <Header />
 
         {/* Hero Section */}
-        <section className="relative py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-[#0369a1] text-white overflow-hidden">
+        <section className="relative py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-[#8BC756] text-white overflow-hidden">
           <div className="absolute inset-0 concrete-texture opacity-10"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
@@ -105,7 +105,7 @@ const FaqPage = () => {
                 variant="ghost"
                 size="sm"
                 onClick={toggleAll}
-                className="text-slate-500 hover:text-[#0369a1] font-medium transition-colors"
+                className="text-slate-500 hover:text-[#8BC756] font-medium transition-colors"
               >
                 {expandedItems.length === faqItems.length ? "Contraer todo" : "Expandir todo"}
               </Button>
@@ -123,7 +123,7 @@ const FaqPage = () => {
               >
                 {faqData.map((item, index) => (
                   <AccordionItem key={index} value={`item-${index}`} className="border-b border-slate-200 group">
-                    <AccordionTrigger className="text-left text-lg font-semibold text-slate-900 hover:text-[#0369a1] transition-colors duration-200 decoration-none">
+                    <AccordionTrigger className="text-left text-lg font-semibold text-slate-900 hover:text-[#8BC756] transition-colors duration-200 decoration-none">
                       {item.question}
                     </AccordionTrigger>
                     <AccordionContent className="text-slate-600 leading-relaxed text-base">
@@ -143,7 +143,7 @@ const FaqPage = () => {
             >
               <h3 className="text-2xl font-bold text-slate-900 mb-4">¿Tienes otra consulta?</h3>
               <p className="text-slate-600 mb-6">No dudes en ponerte en contacto directo con nosotros para resolver cualquier detalle antes de tu inscripción.</p>
-              <Button asChild size="lg" className="bg-[#0369a1] text-white hover:bg-[#0284c7] transition-all duration-200">
+              <Button asChild size="lg" className="bg-[#8BC756] text-slate-900 hover:bg-[#6A9941] transition-all duration-200">
                 <Link to="/contacto#contacto-info">Contactarnos</Link>
               </Button>
             </motion.div>

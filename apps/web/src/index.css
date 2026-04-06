@@ -24,8 +24,8 @@ html {
     --popover: 0 0% 100%;
     --popover-foreground: 222 47% 11%;
     
-    --primary: 199 89% 38%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 92 50% 56%;
+    --primary-foreground: 222 47% 11%;
     
     --secondary: 215 25% 27%;
     --secondary-foreground: 0 0% 100%;
@@ -33,15 +33,15 @@ html {
     --muted: 215 16% 47%;
     --muted-foreground: 215 16% 47%;
     
-    --accent: 199 100% 39%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 92 50% 56%;
+    --accent-foreground: 222 47% 11%;
     
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
     
     --border: 220 13% 91%;
     --input: 220 13% 91%;
-    --ring: 199 89% 38%;
+    --ring: 92 50% 56%;
     
     --radius: 0.75rem;
     
@@ -59,8 +59,8 @@ html {
     --slate-600: 215 16% 47%;
     --concrete-light: 210 11% 96%;
     --concrete-dark: 215 14% 34%;
-    --arch-blue: 199 89% 38%;
-    --arch-blue-light: 199 98% 48%;
+    --arch-green: 92 50% 56%;
+    --arch-green-light: 92 45% 45%;
   }
   
   .dark {
@@ -73,7 +73,7 @@ html {
     --popover: 215 25% 27%;
     --popover-foreground: 0 0% 100%;
     
-    --primary: 199 98% 48%;
+    --primary: 92 50% 56%;
     --primary-foreground: 222 47% 11%;
     
     --secondary: 215 16% 47%;
@@ -82,19 +82,19 @@ html {
     --muted: 215 14% 34%;
     --muted-foreground: 215 16% 47%;
     
-    --accent: 199 89% 38%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 92 50% 56%;
+    --accent-foreground: 222 47% 11%;
     
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
     
     --border: 215 14% 34%;
     --input: 215 14% 34%;
-    --ring: 199 98% 48%;
+    --ring: 92 50% 56%;
     
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 199 76.3% 48%;
+    --sidebar-primary: 92 50% 56%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 240 3.7% 15.9%;
     --sidebar-accent-foreground: 240 4.8% 95.9%;
@@ -124,10 +124,10 @@ html {
   }
   
   .shadow-arch {
-    box-shadow: 0 10px 40px -10px rgba(3, 105, 161, 0.2);
+    box-shadow: 0 10px 40px -10px rgba(139, 199, 86, 0.2);
   }
   
   .shadow-arch-lg {
-    box-shadow: 0 20px 60px -15px rgba(3, 105, 161, 0.3);
+    box-shadow: 0 20px 60px -15px rgba(139, 199, 86, 0.3);
   }
 }
