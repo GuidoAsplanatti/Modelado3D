@@ -246,9 +246,9 @@ const ContactoPage = () => {
                 className="bg-slate-50 rounded-2xl p-8 border border-slate-200"
               >
                 <div className="space-y-6">
+                  <input type="hidden" name="_next" value="https://cursomodelado3d.com.ar/gracias" />
                   <input type="hidden" name="_cc" value="CORREO_MUNICIPIO_AQUI@gmail.com" />
                   <input type="hidden" name="_subject" value="Formulario Curso Modelado 3D" />
-                  <input type="hidden" name="_next" value="http://localhost:3000/gracias" />
                   <input type="hidden" name="_template" value="table" />
                   <input type="hidden" name="_honey" style={{ display: 'none' }} />
                   <input type="hidden" name="Formación Profesional" value={formData.background} />

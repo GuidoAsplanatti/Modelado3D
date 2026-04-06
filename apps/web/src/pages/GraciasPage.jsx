@@ -10,7 +10,7 @@ const GraciasPage = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       navigate('/');
-    }, 5000);
+    }, 4000);
 
     return () => clearTimeout(timer);
   }, [navigate]);
@@ -47,7 +47,7 @@ const GraciasPage = () => {
           </p>
           
           <p className="text-sm text-slate-500 mb-8">
-            Serás redirigido al inicio en 5 segundos...
+            Serás redirigido al inicio en 4 segundos...
           </p>
 
           <Link 

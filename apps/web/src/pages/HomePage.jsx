@@ -16,12 +16,12 @@ const HomePage = () => {
 
   const images = [
     '/images/proyecto5.jpg',
-    '/images/baño.jpeg',
+    '/images/bano.jpeg',
     '/images/procesoRender/CasaH1.png',
     '/images/procesoRender/CasaH2.png',
     '/images/procesoRender/CasaH3.png',
     '/images/proyecto5.jpg',
-    '/images/baño.jpeg',
+    '/images/bano.jpeg',
     '/images/procesoRender/CasaH1.png',
     '/images/procesoRender/CasaH2.png',
     '/images/procesoRender/CasaH3.png'
