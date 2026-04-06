@@ -13,7 +13,9 @@ const Header = () => {
     { name: 'Home', path: '/' },
     { name: 'Curso', path: '/curso' },
     { name: 'Instructor', path: '/instructor' },
-    { name: 'Contacto', path: '/contacto' }
+    { name: 'Ubicación', path: '/ubicacion' },
+    { name: 'Preguntas', path: '/preguntas' },
+    { name: 'Contacto', path: '/contacto#contacto-info' }
   ];
 
   const isActive = (path) => location.pathname === path;
@@ -23,14 +25,9 @@ const Header = () => {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 rounded-xl bg-[#0369a1] flex items-center justify-center transition-all duration-200 group-hover:bg-[#0284c7]">
-              <Layers className="w-6 h-6 text-white" />
-            </div>
-            <div className="hidden sm:block">
-              <span className="text-lg font-bold text-slate-900">Modelado 3D</span>
-              <span className="block text-xs text-slate-600">Arquitectura</span>
-            </div>
+          <Link to="/" className="flex items-center gap-4 group">
+            <img src="/images/logos/innovaVerde.png" alt="Innova Logo" className="h-10 w-auto object-contain" />
+            <img src="/images/logos/ConcordiaVerde.png" alt="Municipalidad Concordia Logo" className="h-10 w-auto object-contain" />
           </Link>
 
           {/* Desktop Navigation */}

@@ -14,6 +14,8 @@ import PricingCard from '@/components/PricingCard.jsx';
 import { CheckCircle2, MapPin, Mail, Phone, AlertCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { toast } from 'sonner';
+import { useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 
 const ContactoPage = () => {
   const [formData, setFormData] = useState({
@@ -27,6 +29,19 @@ const ContactoPage = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [showModal, setShowModal] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    const hash = location.hash;
+    if (hash === '#contacto-info' || hash === '#inversion') {
+      setTimeout(() => {
+        const element = document.getElementById(hash.substring(1));
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
+  }, [location.hash]);
 
   const pricingPlans = [
     {
@@ -117,15 +132,20 @@ const ContactoPage = () => {
               <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight" style={{ letterSpacing: '-0.02em' }}>
                 Inscripción al curso
               </h1>
-              <p className="text-xl text-slate-200 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-xl text-slate-200 max-w-3xl mx-auto leading-relaxed mb-10">
                 Reserva tu lugar en el próximo curso. Solo 30 cupos disponibles
               </p>
+              
+              <div className="flex justify-center items-center gap-8 opacity-90">
+                <img src="/images/logos/innovaVerde.png" alt="Innova Logo" className="h-10 md:h-14 w-auto object-contain brightness-0 invert" />
+                <img src="/images/logos/ConcordiaVerde.png" alt="Municipalidad Concordia Logo" className="h-10 md:h-14 w-auto object-contain brightness-0 invert" />
+              </div>
             </motion.div>
           </div>
         </section>
 
         {/* Pricing Section */}
-        <section className="py-20 bg-slate-50">
+        <section id="inversion" className="py-20 bg-slate-50 scroll-mt-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -134,9 +154,6 @@ const ContactoPage = () => {
               transition={{ duration: 0.6 }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4" style={{ letterSpacing: '-0.02em' }}>
-                Opciones de inversión
-              </h2>
               <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
                 Elige el plan que mejor se adapte a tus necesidades
               </p>
@@ -363,7 +380,7 @@ const ContactoPage = () => {
         </section>
 
         {/* Contact Info */}
-        <section className="py-20 bg-slate-50">
+        <section id="contacto-info" className="py-20 bg-slate-50 scroll-mt-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}

@@ -6,6 +6,8 @@ import ScrollToTop from './components/ScrollToTop.jsx';
 import HomePage from './pages/HomePage.jsx';
 import CursosPage from './pages/CursosPage.jsx';
 import InstructorPage from './pages/InstructorPage.jsx';
+import UbicacionPage from './pages/UbicacionPage.jsx';
+import FaqPage from './pages/FaqPage.jsx';
 import ContactoPage from './pages/ContactoPage.jsx';
 import GraciasPage from './pages/GraciasPage.jsx';
 import PrivacyPolicy from './pages/PrivacyPolicy.jsx';
@@ -19,6 +21,8 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/curso" element={<CursosPage />} />
         <Route path="/instructor" element={<InstructorPage />} />
+        <Route path="/ubicacion" element={<UbicacionPage />} />
+        <Route path="/preguntas" element={<FaqPage />} />
         <Route path="/contacto" element={<ContactoPage />} />
         <Route path="/gracias" element={<GraciasPage />} />
         <Route path="/privacidad" element={<PrivacyPolicy />} />

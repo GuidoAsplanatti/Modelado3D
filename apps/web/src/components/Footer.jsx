@@ -8,13 +8,15 @@ const Footer = () => {
     { name: 'Home', path: '/' },
     { name: 'Curso', path: '/curso' },
     { name: 'Instructor', path: '/instructor' },
+    { name: 'Ubicación', path: '/ubicacion' },
+    { name: 'Preguntas', path: '/preguntas' },
     { name: 'Contacto', path: '/contacto' }
   ];
 
   const socialLinks = [
-    { icon: Facebook, href: '#', label: 'Facebook' },
-    { icon: Instagram, href: '#', label: 'Instagram' },
-    { icon: Linkedin, href: '#', label: 'LinkedIn' }
+    { icon: Facebook, href: 'https://www.facebook.com/innovaciondiec', label: 'Facebook' },
+    { icon: Instagram, href: 'https://www.instagram.com/concordia.innovacion/', label: 'Instagram' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/company/dirección-de-innovación-y-economía-del-conocimiento/posts/?feedView=all', label: 'LinkedIn' }
   ];
 
   return (
@@ -68,11 +70,11 @@ const Footer = () => {
               </li>
               <li className="flex items-start gap-2 text-sm text-slate-400">
                 <Mail className="w-4 h-4 text-[#0369a1] flex-shrink-0 mt-0.5" />
-                <span>info@modelado3d.com</span>
+                <span>guidoasplanatti@gmail.com</span>
               </li>
               <li className="flex items-start gap-2 text-sm text-slate-400">
                 <Phone className="w-4 h-4 text-[#0369a1] flex-shrink-0 mt-0.5" />
-                <span>+54 9 345 123-4567</span>
+                <span>+54 9 345 625-9608</span>
               </li>
             </ul>
           </div>
@@ -88,6 +90,8 @@ const Footer = () => {
                   key={social.label}
                   href={social.href}
                   aria-label={social.label}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center hover:bg-[#0369a1] transition-all duration-200 active:scale-[0.98]"
                 >
                   <social.icon className="w-5 h-5" />

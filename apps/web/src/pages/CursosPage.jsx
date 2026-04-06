@@ -30,7 +30,7 @@ const CursosPage = () => {
       deliverables: [
         'Iluminación profesional con archivos IES',
         'Materiales PBR avanzados y texturas realistas',
-        'Renders de interiores con V-Ray',
+        'Renders de interiores',
         'Post-procesado avanzado',
         'Composición y ajustes de color profesionales'
       ]
@@ -38,7 +38,7 @@ const CursosPage = () => {
     {
       name: 'Edificio ARCO',
       duration: 'Semanas 7-8',
-      description: 'Proyecto de gran escala para gestión profesional de proyectos complejos. Aprende etiquetado técnico, organización de archivos y presentación en Behance.',
+      description: 'Proyecto de gran escala para gestión profesional de proyectos complejos. Aprende etiquetado, organización de archivos y presentación en Behance.',
       deliverables: [
         'Gestión de proyecto arquitectónico complejo',
         'Tags y etiquetado profesional',
@@ -70,7 +70,7 @@ const CursosPage = () => {
   const outcomes = [
     'Dominar el workflow completo de visualización arquitectónica',
     'Integrar IA (Gemini) en el proceso de diseño y generación de fachadas',
-    'Crear renders fotorrealistas con Recorridos Virtuales y V-Ray',
+    'Crear renders fotorrealistas con Recorridos Virtuales',
     'Aplicar iluminación profesional IES y materialidad PBR',
     'Realizar post-procesado avanzado',
     'Gestionar proyectos arquitectónicos complejos',
@@ -82,7 +82,7 @@ const CursosPage = () => {
     <>
       <Helmet>
         <title>Programa del Curso - Modelado 3D de Arquitectura</title>
-        <meta name="description" content="Estructura detallada del curso de 8 semanas: 3 proyectos completos, metodología B-Learning, y certificación oficial. Aprende Modelado 3D, Recorridos Virtuales, V-Ray, Post-procesado y Gemini AI." />
+        <meta name="description" content="Estructura detallada del curso de 8 semanas: 3 proyectos completos, metodología B-Learning, y certificación oficial. Aprende Modelado 3D, Recorridos Virtuales, Post-procesado y Gemini AI." />
       </Helmet>
 
       <div className="min-h-screen bg-white">
@@ -101,13 +101,52 @@ const CursosPage = () => {
               <Badge className="mb-6 bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm">
                 Programa Completo
               </Badge>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight" style={{letterSpacing: '-0.02em'}}>
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight" style={{ letterSpacing: '-0.02em' }}>
                 Estructura del curso
               </h1>
-              <p className="text-xl text-slate-200 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-xl text-slate-200 max-w-3xl mx-auto leading-relaxed mb-10">
                 8 semanas intensivas con 3 proyectos completos, metodología B-Learning y certificación oficial
               </p>
+
+              <div className="flex justify-center items-center gap-8 opacity-90">
+                <img src="/images/logos/innovaVerde.png" alt="Innova Logo" className="h-10 md:h-14 w-auto object-contain brightness-0 invert" />
+                <img src="/images/logos/ConcordiaVerde.png" alt="Municipalidad Concordia Logo" className="h-10 md:h-14 w-auto object-contain brightness-0 invert" />
+              </div>
             </motion.div>
+          </div>
+        </section>
+
+        {/* Software Stack Section */}
+        <section className="py-16 bg-slate-50 border-b border-slate-200">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-10">
+              <h2 className="text-2xl md:text-3xl font-bold text-slate-900" style={{ letterSpacing: '-0.02em' }}>
+                Software y Herramientas del Curso
+              </h2>
+            </div>
+            <div className="flex flex-col space-y-6 max-w-4xl mx-auto">
+              {[
+                { name: 'SketchUp', logo: 'sketchup', description: 'Dominio de modelado 3D arquitectónico, organización por etiquetas y componentes.' },
+                { name: 'Enscape', logo: 'enscape', description: 'Renderizado en tiempo real, creación de recorridos virtuales fotorrealistas.' },
+                { name: 'Gemini 3 Flash Image (Nano Banana 2)', logo: 'gemini', description: 'Integración de IA para generación de imágenes y post-procesado avanzado.' },
+                { name: 'Photoshop', logo: 'photoshop', description: 'Post-producción de renders, ajuste de niveles, composición y montajes profesionales.' },
+                { name: 'Figma', logo: 'figma', description: 'Diseño de presentaciones y organización de portfolio para Behance.' }
+              ].map((software, index) => (
+                <div key={index} className="flex flex-col md:flex-row bg-white rounded-2xl shadow-md border border-slate-100 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+                  <div className="w-full md:w-[240px] h-[120px] md:h-[160px] flex-shrink-0 bg-white border-b md:border-b-0 md:border-r-[1.5px] border-slate-100 p-8 flex items-center justify-center">
+                    <img
+                      src={`/images/logos/${software.logo}.png`}
+                      alt={`${software.name} Logo`}
+                      className="w-full h-full object-contain filter group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="p-6 md:p-8 flex flex-col justify-center bg-white">
+                    <h3 className="text-xl font-bold text-slate-900 mb-2">{software.name}</h3>
+                    <p className="text-slate-600 leading-relaxed">{software.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -121,7 +160,7 @@ const CursosPage = () => {
               transition={{ duration: 0.6 }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4" style={{letterSpacing: '-0.02em'}}>
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4" style={{ letterSpacing: '-0.02em' }}>
                 3 proyectos de portfolio profesional
               </h2>
               <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
@@ -147,7 +186,7 @@ const CursosPage = () => {
               transition={{ duration: 0.6 }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4" style={{letterSpacing: '-0.02em'}}>
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4" style={{ letterSpacing: '-0.02em' }}>
                 Metodología B-Learning
               </h2>
               <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
@@ -168,7 +207,7 @@ const CursosPage = () => {
                   <div className="w-12 h-12 rounded-xl bg-[#0369a1] flex items-center justify-center mb-4">
                     {item.icon}
                   </div>
-                  <h3 className="text-xl font-semibold text-slate-900 mb-2" style={{letterSpacing: '-0.01em'}}>
+                  <h3 className="text-xl font-semibold text-slate-900 mb-2" style={{ letterSpacing: '-0.01em' }}>
                     {item.title}
                   </h3>
                   <p className="text-sm text-slate-600 leading-relaxed">
@@ -210,7 +249,7 @@ const CursosPage = () => {
               transition={{ duration: 0.6 }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4" style={{letterSpacing: '-0.02em'}}>
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4" style={{ letterSpacing: '-0.02em' }}>
                 Resultados de aprendizaje
               </h2>
               <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
@@ -241,12 +280,12 @@ const CursosPage = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="mt-12 text-center"
             >
-              <Button 
+              <Button
                 asChild
                 size="lg"
                 className="bg-[#0369a1] text-white hover:bg-[#0284c7] transition-all duration-200 active:scale-[0.98] text-lg px-8 py-6"
               >
-                <Link to="/contacto">Inscribirse ahora</Link>
+                <Link to="/contacto#inversion">Inscribirse ahora</Link>
               </Button>
             </motion.div>
           </div>

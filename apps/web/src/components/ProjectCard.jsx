@@ -19,7 +19,7 @@ const ProjectCard = ({ project, index }) => {
             </Badge>
             <span className="text-sm font-medium text-slate-600">{project.duration}</span>
           </div>
-          <CardTitle className="text-2xl font-bold text-slate-900" style={{letterSpacing: '-0.02em'}}>
+          <CardTitle className="text-2xl font-bold text-slate-900" style={{ letterSpacing: '-0.02em' }}>
             {project.name}
           </CardTitle>
           <CardDescription className="text-base text-slate-600 leading-relaxed">
@@ -29,7 +29,7 @@ const ProjectCard = ({ project, index }) => {
         <CardContent>
           <div className="space-y-3">
             <h4 className="text-sm font-semibold text-slate-900 tracking-wide uppercase">
-              Entregables clave
+              Aprenderemos
             </h4>
             <ul className="space-y-2">
               {project.deliverables.map((deliverable, idx) => (
