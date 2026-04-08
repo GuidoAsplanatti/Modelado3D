@@ -15,7 +15,7 @@ const Header = () => {
     { name: 'Instructor', path: '/instructor' },
     { name: 'Ubicación', path: '/ubicacion' },
     { name: 'Preguntas', path: '/preguntas' },
-    { name: 'Contacto', path: '/contacto#contacto-info' }
+    { name: 'Contacto', path: '/contacto' }
   ];
 
   const isActive = (path) => location.pathname === path;
@@ -26,8 +26,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="flex items-center gap-4 group">
-            <img src="/images/logos/innovaVerde.png" alt="Innova Logo" className="h-10 w-auto object-contain" />
-            <img src="/images/logos/ConcordiaVerde.png" alt="Municipalidad Concordia Logo" className="h-10 w-auto object-contain" />
+            <img src="/images/logos/3dvision.png" alt="3D Vision Logo" className="h-10 w-auto object-contain py-1" />
           </Link>
 
           {/* Desktop Navigation */}

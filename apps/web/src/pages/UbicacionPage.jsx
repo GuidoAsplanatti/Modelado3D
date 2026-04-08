@@ -31,9 +31,12 @@ const UbicacionPage = () => {
                 Un espacio de innovación diseñado para el aprendizaje continuo y el desarrollo tecnológico
               </p>
 
-              <div className="flex justify-center items-center gap-8 opacity-90">
-                <img src="/images/logos/innovaVerde.png" alt="Innova Logo" className="h-10 md:h-14 w-auto object-contain brightness-0 invert" />
-                <img src="/images/logos/ConcordiaVerde.png" alt="Municipalidad Concordia Logo" className="h-10 md:h-14 w-auto object-contain brightness-0 invert" />
+              <div className="flex flex-col items-center gap-4 mt-10 opacity-90">
+                <span className="text-slate-300 text-sm font-medium">Con el apoyo y acompañamiento de</span>
+                <div className="flex justify-center items-center gap-8">
+                  <img src="/images/logos/innovaVerde.png" alt="Innova Logo" className="h-10 md:h-14 w-auto object-contain brightness-0 invert" />
+                  <img src="/images/logos/ConcordiaVerde.png" alt="Municipalidad Concordia Logo" className="h-10 md:h-14 w-auto object-contain brightness-0 invert" />
+                </div>
               </div>
             </motion.div>
           </div>
@@ -62,7 +65,7 @@ const UbicacionPage = () => {
                 transition={{ duration: 0.8 }}
                 className="space-y-6"
               >
-                <h2 className="text-3xl font-bold text-slate-900 leading-tight">Espacios de Innovación</h2>
+                <h2 className="text-3xl font-bold text-slate-900 leading-tight">Puerto Tec</h2>
                 <p className="text-lg text-slate-600 leading-relaxed">
                   Una sede equipada con tecnología de punta en el corazón de Concordia, preparada para recibir a la próxima generación de profesionales 3D. Contamos con infraestructura moderna diseñada para el alto rendimiento.
                 </p>

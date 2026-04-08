@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Layers, MapPin, Mail, Phone, Facebook, Instagram, Linkedin } from 'lucide-react';
+import { Layers, MapPin, Facebook, Instagram, Linkedin } from 'lucide-react';
 
 const Footer = () => {
   const quickLinks = [
@@ -67,11 +67,6 @@ const Footer = () => {
               <li className="flex items-start gap-2 text-sm text-slate-400">
                 <MapPin className="w-4 h-4 text-[#8BC756] flex-shrink-0 mt-0.5" />
                 <span>Puerto Tec, Concordia, Entre Ríos</span>
-              </li>
-
-              <li className="flex items-start gap-2 text-sm text-slate-400">
-                <Phone className="w-4 h-4 text-[#8BC756] flex-shrink-0 mt-0.5" />
-                <span>+54 9 345 625-9608</span>
               </li>
             </ul>
           </div>

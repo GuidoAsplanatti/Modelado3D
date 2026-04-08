@@ -23,7 +23,7 @@ const FaqPage = () => {
     },
     {
       question: "¿A qué tipo de público va dirigido?",
-      answer: "El curso está pensado para estudiantes de arquitectura, diseño de interiores, técnicos constructores o cualquier persona interesada en la visualización arquitectónica. Solo se requieren **conocimientos mínimos** de computación (manejo básico de Windows/archivos); no es obligatorio tener experiencia previa en modelado 3D."
+      answer: "Está pensado para estudiantes de arquitectura, diseño de interiores, técnicos constructores o cualquier persona que quiera aprender desde cero o pulir sus habilidades. Está enfocado en nivel principiante/intermedio, por lo que no es para profesionales que ya dominen SketchUp y hagan renders avanzados. En cuanto a requisitos, necesitás conocimientos básicos o medios de ofimática (manejo de Windows, carpetas, archivos) y saber instalar programas en tu computadora. No hace falta experiencia previa en modelado 3D."
     },
     {
       question: "Si quedo fuera de los 30 cupos, ¿este curso se repetirá?",
@@ -40,6 +40,10 @@ const FaqPage = () => {
     {
       question: "¿Entregan certificado al finalizar?",
       answer: "Sí, al concluir los módulos y entregar los 3 proyectos prácticos, se otorgará un certificado digital avalado por la Dirección de Innovación y Economía del Conocimiento (DIEC) de la Municipalidad de Concordia y el instructor a cargo."
+    },
+    {
+      question: "¿Cuándo arranca y cuáles son las fechas importantes?",
+      answer: "Tené en cuenta estas fechas clave: las inscripciones cierran el 17 de abril. Las clases inician oficialmente el 23 de abril y el programa tiene una duración de 8 semanas intensivas."
     }
   ];
 
@@ -89,9 +93,12 @@ const FaqPage = () => {
                 Todo lo que necesitas saber antes de comenzar tu formación.
               </p>
 
-              <div className="flex justify-center items-center gap-8 opacity-90">
-                <img src="/images/logos/innovaVerde.png" alt="Innova Logo" className="h-10 md:h-14 w-auto object-contain brightness-0 invert" />
-                <img src="/images/logos/ConcordiaVerde.png" alt="Municipalidad Concordia Logo" className="h-10 md:h-14 w-auto object-contain brightness-0 invert" />
+              <div className="flex flex-col items-center gap-4 mt-10 opacity-90">
+                <span className="text-slate-300 text-sm font-medium">Con el apoyo y acompañamiento de</span>
+                <div className="flex justify-center items-center gap-8">
+                  <img src="/images/logos/innovaVerde.png" alt="Innova Logo" className="h-10 md:h-14 w-auto object-contain brightness-0 invert" />
+                  <img src="/images/logos/ConcordiaVerde.png" alt="Municipalidad Concordia Logo" className="h-10 md:h-14 w-auto object-contain brightness-0 invert" />
+                </div>
               </div>
             </motion.div>
           </div>
@@ -143,9 +150,15 @@ const FaqPage = () => {
             >
               <h3 className="text-2xl font-bold text-slate-900 mb-4">¿Tienes otra consulta?</h3>
               <p className="text-slate-600 mb-6">No dudes en ponerte en contacto directo con nosotros para resolver cualquier detalle antes de tu inscripción.</p>
-              <Button asChild size="lg" className="bg-[#8BC756] text-slate-900 hover:bg-[#6A9941] transition-all duration-200">
-                <Link to="/contacto#contacto-info">Contactarnos</Link>
-              </Button>
+              <a
+                href="https://www.instagram.com/concordia.innovacion/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button size="lg" className="bg-gradient-to-r from-[#833AB4] via-[#E1306C] to-[#FD1D1D] text-white hover:scale-105 transition-transform duration-300 shadow-md border-0">
+                  Escribinos por Instagram
+                </Button>
+              </a>
             </motion.div>
           </div>
         </section>

@@ -2,33 +2,17 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Textarea } from '@/components/ui/textarea';
-import { Checkbox } from '@/components/ui/checkbox';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Badge } from '@/components/ui/badge';
 import Header from '@/components/Header.jsx';
 import Footer from '@/components/Footer.jsx';
 import PricingCard from '@/components/PricingCard.jsx';
-import { CheckCircle2, MapPin, Mail, Phone, AlertCircle } from 'lucide-react';
+import { CheckCircle2, MapPin, Phone, Instagram } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { toast } from 'sonner';
 import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 
 const ContactoPage = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    background: '',
-    bankTransferConfirmed: false,
-    message: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [showModal, setShowModal] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -45,22 +29,7 @@ const ContactoPage = () => {
 
   const pricingPlans = [
     {
-      name: 'Inversión completa',
-      description: 'Pago único sin descuentos',
-      price: 110240,
-      cta: 'No disponible',
-      disabled: true,
-      features: [
-        'Acceso completo al curso de 8 semanas',
-        'Clases presenciales en Puerto Tec',
-        'Tutorías virtuales personalizadas',
-        'Contenido complementario en YouTube',
-        'Certificación oficial',
-        'Soporte durante todo el curso'
-      ]
-    },
-    {
-      name: 'Beca Concordia Innova',
+      name: 'Solicito Becas disponibles',
       description: 'Pago único con descuento especial',
       price: 50000,
       originalPrice: 110240,
@@ -77,34 +46,6 @@ const ContactoPage = () => {
       ]
     }
   ];
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
-
-  const handleSelectChange = (value) => {
-    setFormData(prev => ({ ...prev, background: value }));
-  };
-
-  const handleCheckboxChange = (checked) => {
-    setFormData(prev => ({ ...prev, bankTransferConfirmed: checked }));
-  };
-
-  const handleSubmit = (e) => {
-    if (!formData.bankTransferConfirmed) {
-      e.preventDefault();
-      setShowModal(true);
-      return;
-    }
-    if (!formData.background) {
-      e.preventDefault();
-      alert('Por favor selecciona tu formación profesional.');
-      return;
-    }
-
-    setIsSubmitting(true);
-  };
 
   return (
     <>
@@ -136,9 +77,12 @@ const ContactoPage = () => {
                 Reserva tu lugar en el próximo curso. Solo 30 cupos disponibles
               </p>
 
-              <div className="flex justify-center items-center gap-8 opacity-90">
-                <img src="/images/logos/innovaVerde.png" alt="Innova Logo" className="h-10 md:h-14 w-auto object-contain brightness-0 invert" />
-                <img src="/images/logos/ConcordiaVerde.png" alt="Municipalidad Concordia Logo" className="h-10 md:h-14 w-auto object-contain brightness-0 invert" />
+              <div className="flex flex-col items-center gap-4 mt-10 opacity-90">
+                <span className="text-slate-300 text-sm font-medium">Con el apoyo y acompañamiento de</span>
+                <div className="flex justify-center items-center gap-8">
+                  <img src="/images/logos/innovaVerde.png" alt="Innova Logo" className="h-10 md:h-14 w-auto object-contain brightness-0 invert" />
+                  <img src="/images/logos/ConcordiaVerde.png" alt="Municipalidad Concordia Logo" className="h-10 md:h-14 w-auto object-contain brightness-0 invert" />
+                </div>
               </div>
             </motion.div>
           </div>
@@ -147,26 +91,17 @@ const ContactoPage = () => {
         {/* Pricing Section */}
         <section id="inversion" className="py-20 bg-slate-50 scroll-mt-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="text-center mb-16"
-            >
-              <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
-                Elige el plan que mejor se adapte a tus necesidades
-              </p>
-            </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+
+            <div className="flex justify-center max-w-5xl mx-auto">
               {pricingPlans.map((plan, index) => (
-                <PricingCard
-                  key={index}
-                  plan={plan}
-                  isRecommended={index === 1}
-                  index={index}
-                />
+                <div key={index} className="w-full max-w-md">
+                  <PricingCard
+                    plan={plan}
+                    isRecommended={true}
+                    index={index}
+                  />
+                </div>
               ))}
             </div>
 
@@ -205,177 +140,36 @@ const ContactoPage = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4" style={{ letterSpacing: '-0.02em' }}>
                 Formulario de inscripción
               </h2>
-              <p className="text-lg text-slate-600 leading-relaxed">
-                Completa tus datos para reservar tu lugar
-              </p>
+              <div className="flex flex-col items-center gap-2 mb-6">
+                <p className="text-lg text-slate-600 leading-relaxed">
+                  Completa tus datos para reservar tu lugar
+                </p>
+                <Badge className="bg-slate-800 text-white border-none px-4 py-1.5 text-sm font-semibold shadow-md hover:bg-slate-900 transition-colors">
+                  ⚠️ Cierre de inscripciones: 17 de Abril
+                </Badge>
+              </div>
             </motion.div>
 
-            {isSubmitted ? (
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5 }}
-                className="bg-green-50 border border-green-200 rounded-2xl p-8 text-center"
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="flex justify-center mt-8 bg-slate-50 border border-slate-200 rounded-3xl p-10 sm:p-16 shadow-xl max-w-4xl mx-auto"
+            >
+              <a
+                href="https://forms.gle/tDu29h6MWC6Z9NGn6"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full md:w-auto"
               >
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <CheckCircle2 className="w-8 h-8 text-green-600" />
-                </div>
-                <h3 className="text-2xl font-bold text-green-900 mb-2">
-                  Inscripción enviada correctamente
-                </h3>
-                <p className="text-base text-green-700 mb-6 leading-relaxed">
-                  Hemos recibido tu solicitud de inscripción. Te contactaremos en las próximas 24-48 horas para confirmar tu lugar y enviarte los detalles de pago.
-                </p>
                 <Button
-                  onClick={() => setIsSubmitted(false)}
-                  variant="outline"
-                  className="border-green-600 text-green-700 hover:bg-green-50"
+                  className="w-full md:w-auto bg-[#8BC756] text-slate-900 hover:bg-[#7AB345] hover:scale-105 transition-all duration-300 text-lg sm:text-xl font-bold py-8 px-10 rounded-2xl shadow-[0_0_40px_rgba(139,199,86,0.3)] hover:shadow-[0_0_60px_rgba(139,199,86,0.5)] border border-[#8BC756]"
                 >
-                  Enviar otra inscripción
+                  Completar Formulario de Inscripción
                 </Button>
-              </motion.div>
-            ) : (
-              <motion.form
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-                action="https://formsubmit.co/affb26794c444bbef9cddb17845edfeb"
-                method="POST"
-                onSubmit={handleSubmit}
-                className="bg-slate-50 rounded-2xl p-8 border border-slate-200"
-              >
-                <div className="space-y-6">
-                  <input type="hidden" name="_next" value="https://cursomodelado3d.com.ar/gracias" />
-                  <input type="hidden" name="_cc" value="CORREO_MUNICIPIO_AQUI@gmail.com" />
-                  <input type="hidden" name="_subject" value="Formulario Curso Modelado 3D" />
-                  <input type="hidden" name="_template" value="table" />
-                  <input type="hidden" name="_honey" style={{ display: 'none' }} />
-                  <input type="hidden" name="Formación Profesional" value={formData.background} />
-                  <input type="hidden" name="Confirma tener Computadora" value={formData.bankTransferConfirmed ? "Si" : "No"} />
-
-                  {/* Name */}
-                  <div>
-                    <Label htmlFor="name" className="text-sm font-medium text-slate-900">
-                      Nombre completo *
-                    </Label>
-                    <Input
-                      id="name"
-                      name="Nombre Completo"
-                      type="text"
-                      value={formData.name}
-                      onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
-                      placeholder="Tu nombre completo"
-                      required
-                      className="mt-2 bg-white text-slate-900 placeholder:text-slate-400"
-                    />
-                  </div>
-
-                  {/* Email */}
-                  <div>
-                    <Label htmlFor="email" className="text-sm font-medium text-slate-900">
-                      Email *
-                    </Label>
-                    <Input
-                      id="email"
-                      name="Email"
-                      type="email"
-                      value={formData.email}
-                      onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
-                      placeholder="tu@email.com"
-                      required
-                      className="mt-2 bg-white text-slate-900 placeholder:text-slate-400"
-                    />
-                  </div>
-
-                  {/* Phone */}
-                  <div>
-                    <Label htmlFor="phone" className="text-sm font-medium text-slate-900">
-                      Teléfono *
-                    </Label>
-                    <Input
-                      id="phone"
-                      name="Teléfono"
-                      type="tel"
-                      value={formData.phone}
-                      onChange={(e) => setFormData(prev => ({ ...prev, phone: e.target.value }))}
-                      placeholder="+54 9 345 123-4567"
-                      required
-                      className="mt-2 bg-white text-slate-900 placeholder:text-slate-400"
-                    />
-                  </div>
-
-                  {/* Background */}
-                  <div>
-                    <Label htmlFor="background" className="text-sm font-medium text-slate-900">
-                      Formación profesional *
-                    </Label>
-                    <Select value={formData.background} onValueChange={handleSelectChange}>
-                      <SelectTrigger className="mt-2 bg-white text-slate-900">
-                        <SelectValue placeholder="Selecciona tu formación" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="architect">Arquitecto/a</SelectItem>
-                        <SelectItem value="engineer">Ingeniero/a</SelectItem>
-                        <SelectItem value="student">Estudiante</SelectItem>
-                        <SelectItem value="designer">Diseñador/a</SelectItem>
-                        <SelectItem value="other">Otro</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
-
-                  {/* Message */}
-                  <div>
-                    <Label htmlFor="message" className="text-sm font-medium text-slate-900">
-                      Mensaje adicional (opcional)
-                    </Label>
-                    <Textarea
-                      id="message"
-                      name="Mensaje Adicional"
-                      value={formData.message}
-                      onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
-                      placeholder="¿Tienes alguna pregunta o comentario?"
-                      rows={4}
-                      className="mt-2 bg-white text-slate-900 placeholder:text-slate-400"
-                    />
-                  </div>
-
-                  {/* Bank Transfer Confirmation */}
-                  <div className="flex items-start gap-3 p-4 bg-white rounded-xl border border-slate-200">
-                    <Checkbox
-                      id="bankTransfer"
-                      checked={formData.bankTransferConfirmed}
-                      onCheckedChange={handleCheckboxChange}
-                    />
-                    <div className="flex-1">
-                      <Label
-                        htmlFor="bankTransfer"
-                        className="text-sm font-medium text-slate-900 cursor-pointer"
-                      >
-                        Confirmo que cuento con PC y o Notebook para la realización del curso*
-                      </Label>
-                      <p className="text-xs text-slate-600 mt-1 leading-relaxed">
-                        Al marcar esta casilla, confirmas que tienes computadora personal para la realización del curso. Este curso brinda un espacio común presencial pero no designa computadoras para trabajar.
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Submit Button */}
-                  <Button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="w-full bg-[#8BC756] text-slate-900 hover:bg-[#6A9941] transition-all duration-200 active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed"
-                    size="lg"
-                  >
-                    {isSubmitting ? 'Cargando...' : 'Enviar inscripción'}
-                  </Button>
-
-                  <p className="text-xs text-slate-500 text-center leading-relaxed">
-                    Al enviar este formulario, aceptas nuestros términos de servicio y política de privacidad
-                  </p>
-                </div>
-              </motion.form>
-            )}
+              </a>
+            </motion.div>
           </div>
         </section>
 
@@ -392,7 +186,7 @@ const ContactoPage = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4" style={{ letterSpacing: '-0.02em' }}>
                 Información de contacto
               </h2>
-              <p className="text-lg text-slate-600 leading-relaxed">
+              <p className="text-lg text-slate-600 leading-relaxed mx-auto">
                 ¿Tienes preguntas? Contáctanos
               </p>
             </motion.div>
@@ -420,15 +214,22 @@ const ContactoPage = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.1 }}
-                className="bg-white rounded-2xl p-6 shadow-lg border border-slate-200 text-center"
+                className="bg-white rounded-2xl p-6 shadow-lg border border-slate-200 text-center flex flex-col justify-center items-center"
               >
-                <div className="w-12 h-12 bg-[#8BC756] rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <Mail className="w-6 h-6 text-white" />
+                <div className="w-12 h-12 bg-gradient-to-tr from-[#FD1D1D] via-[#E1306C] to-[#833AB4] rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <Instagram className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-lg font-semibold text-slate-900 mb-2">Email</h3>
-                <p className="text-sm text-slate-600">
-                  info@modelado3d.com
-                </p>
+                <h3 className="text-lg font-semibold text-slate-900 mb-3">Redes Sociales</h3>
+                <a
+                  href="https://www.instagram.com/concordia.innovacion/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full mt-auto"
+                >
+                  <Button className="w-full bg-gradient-to-r from-[#833AB4] via-[#E1306C] to-[#FD1D1D] text-white hover:scale-105 transition-transform duration-300 shadow-md border-0">
+                    Escribinos por Instagram
+                  </Button>
+                </a>
               </motion.div>
 
               <motion.div
@@ -443,7 +244,7 @@ const ContactoPage = () => {
                 </div>
                 <h3 className="text-lg font-semibold text-slate-900 mb-2">Teléfono</h3>
                 <p className="text-sm text-slate-600">
-                  +54 9 345 123-4567
+                  +54 9 345 625-9608
                 </p>
               </motion.div>
             </div>
@@ -453,35 +254,7 @@ const ContactoPage = () => {
         <Footer />
       </div>
 
-      {/* PC Requirement Modal */}
-      {showModal && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-900/50 backdrop-blur-sm">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            className="bg-white rounded-2xl p-6 md:p-8 max-w-md w-full shadow-2xl relative"
-          >
-            <div className="flex flex-col items-center text-center">
-              <div className="w-16 h-16 bg-[#8BC756]/10 rounded-full flex items-center justify-center mb-4">
-                <AlertCircle className="w-8 h-8 text-[#8BC756]" />
-              </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-2">
-                Atención: Requisito de PC
-              </h3>
-              <p className="text-base text-slate-600 mb-8 leading-relaxed">
-                Es obligatorio contar con una computadora propia para realizar el curso. Por favor, marca la casilla para continuar.
-              </p>
-              <Button
-                onClick={() => setShowModal(false)}
-                className="w-full bg-[#8BC756] text-slate-900 hover:bg-[#6A9941] transition-all duration-200 active:scale-[0.98]"
-                size="lg"
-              >
-                Entendido
-              </Button>
-            </div>
-          </motion.div>
-        </div>
-      )}
+
     </>
   );
 };

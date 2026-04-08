@@ -53,12 +53,12 @@ const CursosPage = () => {
     {
       icon: <Users className="w-6 h-6 text-white" />,
       title: 'Clases presenciales',
-      description: 'Jueves 14:30-16:30hs en Puerto Tec, Concordia. Trabajo práctico guiado y resolución de dudas en tiempo real.'
+      description: 'Jueves 14:30-17:00hs en Puerto Tec, Concordia. Trabajo práctico guiado y resolución de dudas en tiempo real.'
     },
     {
       icon: <Video className="w-6 h-6 text-white" />,
       title: 'Tutorías virtuales',
-      description: 'Martes 1:30h. Seguimiento personalizado, revisión de avances y feedback individual sobre tus proyectos.'
+      description: 'Martes 14:30-16:00hs. Seguimiento personalizado, revisión de avances y feedback individual sobre tus proyectos.'
     },
     {
       icon: <BookOpen className="w-6 h-6 text-white" />,
@@ -108,9 +108,12 @@ const CursosPage = () => {
                 8 semanas intensivas con 3 proyectos completos, metodología B-Learning y certificación oficial
               </p>
 
-              <div className="flex justify-center items-center gap-8 opacity-90">
-                <img src="/images/logos/innovaVerde.png" alt="Innova Logo" className="h-10 md:h-14 w-auto object-contain brightness-0 invert" />
-                <img src="/images/logos/ConcordiaVerde.png" alt="Municipalidad Concordia Logo" className="h-10 md:h-14 w-auto object-contain brightness-0 invert" />
+              <div className="flex flex-col items-center gap-4 mt-10 opacity-90">
+                <span className="text-slate-300 text-sm font-medium">Con el apoyo y acompañamiento de</span>
+                <div className="flex justify-center items-center gap-8">
+                  <img src="/images/logos/innovaVerde.png" alt="Innova Logo" className="h-10 md:h-14 w-auto object-contain brightness-0 invert" />
+                  <img src="/images/logos/ConcordiaVerde.png" alt="Municipalidad Concordia Logo" className="h-10 md:h-14 w-auto object-contain brightness-0 invert" />
+                </div>
               </div>
             </motion.div>
           </div>

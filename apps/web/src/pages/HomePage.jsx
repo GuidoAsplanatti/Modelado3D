@@ -82,16 +82,29 @@ const HomePage = () => {
     value: 'Puerto Tec, Concordia'
   }, {
     icon: <Calendar className="w-5 h-5 text-[#8BC756]" />,
-    label: 'Duración',
-    value: '8 semanas intensivas'
+    label: 'Inicio de clases',
+    value: 'Jueves 23 de Abril'
   }, {
     icon: <Clock className="w-5 h-5 text-[#8BC756]" />,
     label: 'Horarios',
-    value: 'Martes 1:30h (Virtual) + Jueves 14:30-16:30hs (Presencial)'
+    isCustom: true,
+    value: (
+      <div className="space-y-1">
+        <div>
+          <span className="block">Jueves Presencial</span>
+          <span className="text-slate-600 font-normal">de 14:30 a 17:00 hs</span>
+        </div>
+        <hr className="border-slate-200 my-2" />
+        <div>
+          <span className="block">Martes Virtual</span>
+          <span className="text-slate-600 font-normal">de 14:30 a 16:00 hs</span>
+        </div>
+      </div>
+    )
   }, {
-    icon: <Users className="w-5 h-5 text-[#8BC756]" />,
-    label: 'Cupos',
-    value: 'Limitado a 30 estudiantes'
+    icon: <Zap className="w-5 h-5 text-[#8BC756]" />,
+    label: 'Cierre inscripciones',
+    value: '17 de Abril'
   }];
 
   return (
@@ -127,15 +140,18 @@ const HomePage = () => {
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight" style={{
                 letterSpacing: '-0.02em'
               }}>
-                Modelado 3D de Arquitectura:<br />
-                Diseña con IA, sorprende con 3D.
+                Diseña con IA, sorprende con 3D.<br />
+                Modelado 3D de Arquitectura
               </h1>
               <p className="text-xl md:text-2xl text-slate-200 mb-8 max-w-4xl mx-auto leading-relaxed">
                 Domina un workflow senior optimizado integrando Modelado 3D, Recorridos Virtuales, Post-procesado y Gemini AI
               </p>
-              <div className="flex justify-center items-center gap-8 mb-10 opacity-90">
-                <img src="/images/logos/innovaVerde.png" alt="Innova Logo" className="h-12 md:h-16 w-auto object-contain brightness-0 invert" />
-                <img src="/images/logos/ConcordiaVerde.png" alt="Municipalidad Concordia Logo" className="h-12 md:h-16 w-auto object-contain brightness-0 invert" />
+              <div className="flex flex-col items-center gap-4 mb-10 opacity-90">
+                <span className="text-slate-300 text-sm font-medium">Con el apoyo y acompañamiento de</span>
+                <div className="flex justify-center items-center gap-8">
+                  <img src="/images/logos/innovaVerde.png" alt="Innova Logo" className="h-12 md:h-16 w-auto object-contain brightness-0 invert" />
+                  <img src="/images/logos/ConcordiaVerde.png" alt="Municipalidad Concordia Logo" className="h-12 md:h-16 w-auto object-contain brightness-0 invert" />
+                </div>
               </div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <Button asChild size="lg" className="bg-[#8BC756] text-slate-900 hover:bg-[#6A9941] transition-all duration-200 active:scale-[0.98] text-lg px-8 py-6">
@@ -144,6 +160,10 @@ const HomePage = () => {
                 <Button asChild size="lg" variant="outline" className="bg-white/10 text-white border-white/30 hover:bg-white/20 backdrop-blur-sm transition-all duration-200 active:scale-[0.98] text-lg px-8 py-6">
                   <Link to="/curso">Ver programa completo</Link>
                 </Button>
+              </div>
+              <div className="mt-8 flex flex-wrap justify-center gap-x-8 gap-y-2 text-sm font-medium">
+                <span className="text-slate-300">Inicio de clases: <span className="text-white">23 de Abril</span></span>
+                <span className="text-[#8BC756]">Cierre de inscripciones: <span className="text-white underline decoration-[#8BC756]/50 underline-offset-4 font-bold">17 de Abril</span></span>
               </div>
             </motion.div>
           </div>
@@ -174,6 +194,22 @@ const HomePage = () => {
             </motion.div>
 
             <ComparisonSlider />
+          </div>
+        </section>
+
+        {/* Sponsors Section placeholder */}
+        <section className="py-20 bg-white border-b border-slate-100">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <span className="text-sm font-medium text-slate-400 tracking-widest uppercase">patrocinadores</span>
+            </div>
+            <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-90 grayscale hover:grayscale-0 transition-all duration-300">
+              <img src="/images/logos/3dvision.png" alt="3D Vision Logo" className="h-16 md:h-20 w-auto object-contain" />
+              <img src="/images/logos/cauper.png" alt="Cauper Logo" className="h-16 md:h-20 w-auto object-contain" />
+              <img src="/images/logos/cafesg.png" alt="CAFESG Logo" className="h-16 md:h-20 w-auto object-contain" />
+              <img src="/images/logos/ferro.png" alt="Ferro Logo" className="h-16 md:h-20 w-auto object-contain" />
+              <img src="/images/logos/ConcordiaVerdeVertical.png" alt="Municipalidad Concordia Logo" className="h-16 md:h-20 w-auto object-contain" />
+            </div>
           </div>
         </section>
 
@@ -246,7 +282,7 @@ const HomePage = () => {
               }} className={`grid grid-cols-1 md:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
                 <div className={index % 2 === 1 ? 'md:order-2' : ''}>
                   <div className="flex items-center gap-3 mb-4">
-                    <span className="text-6xl font-bold text-[#8BC756]/20" style={{
+                    <span className="text-6xl font-bold text-[#8BC756]" style={{
                       fontVariantNumeric: 'tabular-nums'
                     }}>
                       0{index + 1}
@@ -288,7 +324,7 @@ const HomePage = () => {
         </section>
 
         {/* Logistics */}
-        <section className="py-20 bg-slate-900 text-white">
+        <section className="py-20 bg-slate-50 border-b border-slate-100">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div initial={{
               opacity: 0,
@@ -301,13 +337,13 @@ const HomePage = () => {
             }} transition={{
               duration: 0.6
             }} className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4" style={{
                 letterSpacing: '-0.02em'
               }}>
                 Información del curso
               </h2>
-              <p className="text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed">
-                Detalles de ubicación, horarios y modalidad de cursado
+              <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
+                8 Clases presenciales y 7 Clases Virtuales + Clases grabadas en Youtube
               </p>
             </motion.div>
 
@@ -323,18 +359,18 @@ const HomePage = () => {
               }} transition={{
                 duration: 0.5,
                 delay: index * 0.1
-              }} className="bg-slate-800 rounded-2xl p-6 border border-slate-700 hover:border-[#8BC756] transition-all duration-300">
-                <div className="flex items-start gap-3">
-                  <div className="flex-shrink-0 mt-1">
+              }} className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:border-[#8BC756] transition-all duration-300 flex flex-col items-center text-center">
+                <div className="flex flex-col items-center gap-4">
+                  <div className="flex-shrink-0 text-[#8BC756]">
                     {item.icon}
                   </div>
                   <div>
-                    <span className="text-sm font-semibold text-slate-400 tracking-wide uppercase block mb-1">
+                    <span className="text-sm font-semibold text-slate-400 tracking-wide uppercase block mb-2">
                       {item.label}
                     </span>
-                    <span className="text-base text-white font-medium">
+                    <div className="text-base text-slate-900 font-medium leading-tight">
                       {item.value}
-                    </span>
+                    </div>
                   </div>
                 </div>
               </motion.div>)}

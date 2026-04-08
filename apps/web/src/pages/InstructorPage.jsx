@@ -73,6 +73,14 @@ const InstructorPage = () => {
               <p className="text-xl text-slate-200 max-w-3xl mx-auto leading-relaxed">
                 Modelador 3D profesional, Técnico Universitario Programador y especialista en workflows de visualización arquitectónica con IA
               </p>
+
+              <div className="flex flex-col items-center gap-4 mt-10 opacity-90">
+                <span className="text-slate-300 text-sm font-medium">Con el apoyo y acompañamiento de</span>
+                <div className="flex justify-center items-center gap-8">
+                  <img src="/images/logos/innovaVerde.png" alt="Innova Logo" className="h-10 md:h-14 w-auto object-contain brightness-0 invert" />
+                  <img src="/images/logos/ConcordiaVerde.png" alt="Municipalidad Concordia Logo" className="h-10 md:h-14 w-auto object-contain brightness-0 invert" />
+                </div>
+              </div>
             </motion.div>
           </div>
         </section>
